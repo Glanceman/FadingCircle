@@ -7,8 +7,11 @@ let disappear;
 let song;
 let amplitude;
 
-function setup() {
+function preload(){
   song=loadSound('/01.mp3');
+}
+
+function setup() {
   createCanvas(windowWidth, windowHeight);
   disappear=255;
   amplitude=new p5.Amplitude();
