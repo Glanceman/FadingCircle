@@ -8,7 +8,7 @@ let song;
 let amplitude;
 
 function preload(){
-  song=loadSound('01.mp3');
+  song=loadSound('BGM.m4a');
 }
 
 function setup() {
@@ -29,7 +29,7 @@ function draw() {
       song.play();
     }
     let level= amplitude.getLevel()*10;
-  FadingEillipse(windowWidth/2,windowHeight/2,windowHeight*3/4,size,150,220,255,bR,bG,bB,10);
+  FadingEillipse(windowWidth/2,windowHeight/2,windowHeight*3/4,size,map(level,0,1,0,170),220,255,bR,bG,bB,10);
   FadingEillipse(windowWidth/4,windowHeight/4,windowHeight*3/4,size,200,220,255,bR,bG,bB,10);
   FadingEillipse(windowWidth/4,windowHeight*3/4,windowHeight*3/4,size,200,80,150,bR,bG,bB,10);
   FadingEillipse(windowWidth*3/4,windowHeight/4,windowHeight*3/4,size,80,220,150,bR,bG,bB,10);
