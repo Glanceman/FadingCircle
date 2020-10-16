@@ -8,7 +8,7 @@ let song;
 let amplitude;
 
 function preload(){
-  song=loadSound('/01.mp3');
+  song=loadSound('01.mp3');
 }
 
 function setup() {
@@ -20,8 +20,9 @@ function setup() {
 function draw() {
   background(bR,bG,bB,20);
   if(disappear>0){
-    display("Designed by Ben",windowWidth/2,windowHeight/2,disappear,disappear);
-    display("BGM:今日のことは忘れられないよ ",windowWidth/2,windowHeight/2+50,disappear,disappear);
+    display("Fading Cirlce",windowWidth/2,windowHeight/2-50,disappear,disappear);
+    display("Coded by Ben",windowWidth/2,windowHeight/2,disappear,disappear);
+    display("BGM: 今日のことは忘れられないよ ",windowWidth/2,windowHeight/2+50,disappear,disappear);
    disappear--; 
   }else{
     if (song.isPlaying()==false){
