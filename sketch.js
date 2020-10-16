@@ -21,10 +21,10 @@ function draw() {
     display("BGM:今日のことは忘れられないよ ",windowWidth/2,windowHeight/2+50,disappear,disappear);
    disappear--; 
   }else{
-     if (song.isPlaying()==false){
+    if (song.isPlaying()==false){
       song.play();
-     }
-     let level= amplitude.getLevel()*10;
+    }
+    let level= amplitude.getLevel()*10;
   FadingEillipse(windowWidth/2,windowHeight/2,windowHeight*3/4,size,150,220,255,bR,bG,bB,10);
   FadingEillipse(windowWidth/4,windowHeight/4,windowHeight*3/4,size,200,220,255,bR,bG,bB,10);
   FadingEillipse(windowWidth/4,windowHeight*3/4,windowHeight*3/4,size,200,80,150,bR,bG,bB,10);
