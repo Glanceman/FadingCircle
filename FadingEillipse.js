@@ -1,8 +1,8 @@
-function FadingEillipse(x,y,finalSize,initalSize,r,g,b,br,bg,bb,step){
+function FadingEillipse(x,y,initalSize,r,g,b,br,bg,bb,step){
   push();
   noFill();
-  strokeWeight(3)
-    for(var fading=0;fading<finalSize;fading=fading+1){
+  strokeWeight(3);
+    for(var fading=0;fading<initalSize;fading=fading+1){
       var colorFadingR=fading*step;
       var colorFadingG=fading*step;
       var colorFadingB=fading*step;
