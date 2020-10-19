@@ -7,7 +7,7 @@ let p;
 let fadingCircles=[];
 
 function preload(){
-  song=loadSound('Day One.m4a');
+  song=loadSound('BGM.m4a');
 }
 
 function setup() {
@@ -19,9 +19,9 @@ function setup() {
 }
 
 function draw() {
-  background(0,0,0);
+  background(0,0,0,50);
   if(disappear>0){
-    display("Fading Cirlce",windowWidth/2,windowHeight/2-50,disappear,disappear);
+    display("Fading Circle",windowWidth/2,windowHeight/2-50,disappear,disappear);
     display("Coded by Ben",windowWidth/2,windowHeight/2,disappear,disappear);
     display("BGM: Day One ",windowWidth/2,windowHeight/2+50,disappear,disappear);
    disappear--; 
@@ -32,10 +32,10 @@ function draw() {
     // fft.analyze();
     // peakDetect.update(fft);
     let level= amplitude.getLevel()*5;
-    if (level>0.12 && frameCount%60==0){
+    if (level>0.135 && frameCount%60==0){
       let varibleSize=windowHeight*level;
-      if(varibleSize>400){
-        varibleSize=400
+      if(varibleSize>350){
+        varibleSize=350
       }
       p=new fadingCircle(random(1,windowWidth),random(1,windowHeight),varibleSize);
       fadingCircles.push(p);

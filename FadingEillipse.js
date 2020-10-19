@@ -38,8 +38,8 @@ function FadingEillipse(x,y,initalSize,r,g,b,br,bg,bb,step){
         }
       }
       stroke(r-colorFadingR,g-colorFadingG,b-colorFadingB,255-fading*step);
-      var fadingSize=initalSize-3*fading;
-      if(fadingSize>0){
+      var fadingSize=initalSize-4*fading;
+      if(fadingSize>0&&(255-fading*step)>0){
         ellipse(x,y,fadingSize,fadingSize);
       }
     }
