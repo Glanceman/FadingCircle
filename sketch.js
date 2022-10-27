@@ -40,4 +40,13 @@ function draw() {
     size=0;
   }
   }
+  function mousePressed() {
+     if (song.isPlaying()) {
+         // .isPlaying() returns a boolean
+         song.stop();
+
+     } else {
+         song.play();
+     }
+ }
 }
